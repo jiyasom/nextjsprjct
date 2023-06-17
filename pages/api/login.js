@@ -33,7 +33,7 @@ await cors(req, res);
             // Generate a JSON Web Token (JWT) for authentication
             const token = jwt.sign({ userId: user.id }, 'your_secret_key');
 
-            res.status(200).json({ token });
+            res.status(200).json({ token:token,user:user });
           } else {
             res.status(401).json({ message: 'Invalid email or password' });
           }

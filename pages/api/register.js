@@ -27,7 +27,7 @@ await cors(req, res);
             // Generate JWT token
             const token = jwt.sign({ userId }, 'your_secret_key');
             // Generate JWT token
-            res.status(200).json({ token });
+            res.status(200).json({ token:token,cust_id:userId });
         
         }
       }
